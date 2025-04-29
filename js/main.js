@@ -30,11 +30,12 @@ function moveToRight(){
 function moveToLeft (){
     counter--;
     if (counter < 0){
-        
+        counter = sliderSect.length-1;
+        operacion = widthImg * (sliderSect.length-1)
+        slider.style.transform = `translate (-${operacion}%)`;
     }else{
-        counter++;
         operacion = operacion - widthImg;
-        slider.style.transform = `translate(-${operacion}%)`
-        slider.style.transition = "all ease .6s"
+        slider.style.transform = `translate(-${operacion})`;
+        slider.style.transition = "all ease .6s";
     }
 }
