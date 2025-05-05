@@ -4,6 +4,8 @@ const btnLeft = document.querySelector(".btnizq"),
     sliderSect = document.querySelectorAll(".slider_section");
 
 
+
+
     /*    Funciones para mover a derecha e izq  */
 
 btnLeft.addEventListener("click",  e => moveToLeft())
@@ -22,7 +24,7 @@ function moveToRight(){
         counter++;
         operacion = operacion + widthImg;
         slider.style.transform = `translate(-${operacion}%)`
-        slider.style.transition = "all ease-in-out .3s"
+        slider.style.transition = "all ease-in-out .6s"
     }
     
 }
@@ -36,6 +38,6 @@ function moveToLeft (){
     }else{
         operacion = operacion - widthImg;
         slider.style.transform = `translate(-${operacion}%)`;
-        slider.style.transition = "all ease .3s"
+        slider.style.transition = "all ease .6s"
     }
 }
